@@ -1,0 +1,18 @@
+https://www.docker.com/products/docker-desktop/ # если ставится на винду
+https://docs.docker.com/engine/install/ubuntu/ # docker engine для виртуалки
+https://hub.docker.com/_/python
+
+sudo /usr/bin/vmhgfs-fuse .host:/ /home/<имя пользователя> -o subtype=vmhgfs-fuse,allow_other # примонтировать папку
+
+docker ps -a # вывести все контейнеры (включая неактивные)
+docker images # вывести все образы
+docker rm <container> # удалить контейнер
+docker rmi <image> # удалить образ
+docker build -t <container> . # создать контейнер
+docker run --name <container> -p 8001:8000 -d <image> # перенаправляет внутренний порт 8000 на внешний 8001
+docker logs <container> # получить логи контейнера
+
+docker compose up -d # detached
+docker compose stop # остановить стэк compose
+docker compose down -v # остановить стэк и удалить связанные контейнеры
+docker compose ps # вывести активные контейнеры стэка

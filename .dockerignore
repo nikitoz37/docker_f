@@ -1,0 +1,6 @@
+# dirs
+dockerlesson
+__pycache__
+.vscode
+.git
+*.zip
